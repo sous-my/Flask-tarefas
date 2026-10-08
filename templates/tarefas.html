@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title> Minhas tarefas</title>
+    </head>
+    <body>
+aqui fica lista de tarefas 
+       {% if lista %}
+          {% for item in lista %}
+           <li>{{item}}</li>
+           <a href="/delete/{{loop.index0}}"><button>🗑️</button><a/>
+          {% endfor %}
+        
+    
+       {% else %} 
+        <p>Não há itens, voce fez tudo!</p>
+       {%endif%}
+
+
+<form action="/add " method="POST">
+    <input type= "text" name="nova"
+    <button type="submit">Adicionar</button>
+</form>
+    </body>
+</html>
